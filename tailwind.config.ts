@@ -61,6 +61,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				roblox: {
+					red: '#E6332A',
+					blue: '#00A2FF',
+					yellow: '#FFD500',
+					dark: '#2D2D2D'
+				},
+				rarity: {
+					common: '#9CA3AF',
+					rare: '#3B82F6',
+					legendary: '#F59E0B'
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'spin-roulette': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' }
+				},
+				'glow-pulse': {
+					'0%, 100%': { opacity: '1', boxShadow: '0 0 20px currentColor' },
+					'50%': { opacity: '0.8', boxShadow: '0 0 40px currentColor' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'spin-roulette': 'spin-roulette 3s cubic-bezier(0.25, 0.1, 0.25, 1)',
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite'
 			}
 		}
 	},
